@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g&d team fortez</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc; /* Цвет фона */
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        h1, h2, p {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Заголовок */
+        header {
+            background: linear-gradient(135deg, #ff5f6d, #ffc371); /* Градиент для шапки */
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header nav {
+            width: 100%;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: inline-flex;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            font-size: 1.2rem;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Кнопки */
+        .btn {
+            background-color: #ff5f6d;
+            padding: 12px 30px;
+            color: white;
+            border-radius: 30px;
+            font-size: 1rem;
+            margin: 10px 0;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff3b3b;
+            transform: translateY(-3px);
+        }
+
+        /* Главная секция */
+        #home {
+            background: linear-gradient(135deg, #ffecd2, #ff5f6d);
+            padding: 120px 20px;
+            color: white;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        #home img {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Услуги */
+        #services {
+            background: linear-gradient(135deg, #81d4fa, #2196f3);
+            padding: 80px 20px;
+            color: white;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        #services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #services p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #services ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        #services ul li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Про нас */
+        #about {
+            background: linear-gradient(135deg, #ff5f6d, #ffcc71);
+            padding: 80px 20px;
+            color: white;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Зв'язок з нами */
+        #contact {
+            background: linear-gradient(135deg, #0288d1, #039be5);
+            padding: 80px 20px;
+            color: white;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Підвал */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Анимации */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Мобильная адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header nav ul li a {
+                font-size: 1rem;
+            }
+
+            #home h1 {
+                font-size: 2.5rem;
+            }
+
+            #services h2, #about h2, #contact h2 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Заголовок -->
+    <header>
+        <h1>Всіх вітаємо на нашому сайті!</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="btn">Головна</a></li>
+                <li><a href="#services" class="btn">Послуги</a></li>
+                <li><a href="#about" class="btn">Про нас</a></li>
+                <li><a href="#contact" class="btn">Зв'язок</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главная секция -->
+    <section id="home">
+        <h1>Всіх вітаємо!</h1>
+        <p>Ми дуже раді що ви опинилися саме на нашому сайті!!Бажаємо всім гарної праці!</p>
+        <img src="img/beautiful-picture_456341-459.avif" alt="Всіх вітаємо!">
+        <a href="#services" class="btn">Перейти до послуг</a>
+    </section>
+
+    <!-- Послуги -->
+    <section id="services">
+        <h2>Наші послуги</h2>
+        <p>Ми надаємо вам картинки в стилі природи!!!</p>
+        <ul>
+            <li><strong>Навіщо ми це робимо?:</strong> Ми створюємо вам добру та гарну атмосферу!</li>
+            <li><strong>Оформлення сайту:</strong> Ми оформили наш сайт в стилі галереї для того щоб загрузити сюди картинки!</li>
+            <li><strong>Продаж сайтів:</strong> якщо ти хочешь купити в нас сайт , то пиши нам в телеграм!Номер знизу!</li>
+        </ul>
+        <a href="#about" class="btn">Дізнатися про нас</a>
+    </section>
+
+    <!-- Про нас -->
+    <section id="about">
+        <h2>Про нас</h2>
+        <p>Ми - команда яка викладає для вас гарні картинки! </p>
+        <a href="#gallery" class="btn">Галерея</a>
+    </section>
+    <!-- Галерея -->
+<section id="gallery" style="background: linear-gradient(135deg, #ffecd2, #ff5f6d); padding: 80px 20px; color: white; animation: fadeInUp 1.5s ease-in-out;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">Галерея</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
+        Ознайомтесь з нашим індивідуальним підходом до стилю картинок!Перегляньте та збережіть їх собі!
+    </p>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 20px;">
+        <img src="img/1.jpg" alt="Робота 1" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);">
+        <img src="img/2.avif" alt="Робота 2" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);">
+        <img src="img/3.jpg" alt="Робота 3" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);">
+        <img src="img/4.jpg" alt="Робота 4" style="width: 200px; height: 150px; object-fit: cover; border-radius: 10px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);">
+    </div>
+    <a href="#contact" class="btn">Зв'язок</a>
+</section>
+<!-- Отзывы клиентов -->
+<section id="testimonials" style="background: linear-gradient(135deg, #ff5f6d, #ffcc71); padding: 80px 20px; color: white; animation: fadeInUp 1.5s ease-in-out;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">Відгуки клієнтів</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
+        Нам дуже важливі ваші відгуки!Підтримайте нас!
+    </p>
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+        <!-- Отзыв 1 -->
+        <div style="width: 300px; background-color: white; color: #333; border-radius: 10px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+            <img src="img/1.jpg" alt="Клиент 1" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 20px;">
+            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 15px;">"Велике дякую цьому сайту!Завдяки вам я знайшла собі нову аватарку для бізнес-акаунту!"</p>
+            <h4 style="font-size: 1.2rem; color: #ff5f6d;">Ірина Петрівна</h4>
+            <p style="font-size: 1rem; color: #333;">Користувач</p>
+        </div>
+        <!-- Отзыв 2 -->
+        <div style="width: 300px; background-color: white; color: #333; border-radius: 10px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+            <img src="img/3.jpg" alt="Клиент 2" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 20px;">
+            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 15px;">"Дуже гарна команда викладає дуже гарні картинки!Я в захваті!"</p>
+            <h4 style="font-size: 1.2rem; color: #ff5f6d;">Олександр Іванович</h4>
+            <p style="font-size: 1rem; color: #333;">Користувач</p>
+        </div>
+        <!-- Отзыв 3 -->
+        <div style="width: 300px; background-color: white; color: #333; border-radius: 10px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); padding: 20px; text-align: center;">
+            <img src="img/4.jpg" alt="Клиент 3" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 20px;">
+            <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 15px;">"Дуже гарні картинки викладають на цьому сайті ! Завдяки цьому сайту я знайшла собі нову обкладинку на комп'ютер!"</p>
+            <h4 style="font-size: 1.2rem; color: #ff5f6d;">Марія Смірнова</h4>
+            <p style="font-size: 1rem; color: #333;">Користувач"</p>
+        </div>
+    </div>
+    <a href="#contact" class="btn">Связаться с нами</a>
+</section>
+<!-- Раздел комментариев -->
+<section id="comments" style="background: linear-gradient(135deg, #ff5f6d, #ffcc71); padding: 80px 20px; color: white; animation: fadeInUp 1.5s ease-in-out;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">Залиште коментар</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
+        Нам дуже важливо ваша думка про наш сайт!
+    </p>
+    <!-- Раздел комментариев -->
+<section id="comments-section" style="background: linear-gradient(135deg, #ffecd2, #ff5f6d); padding: 80px 20px; color: white; animation: fadeInUp 1.5s ease-in-out;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px; text-align: center;">Залиште свій коментар!</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
+        Ми будемо вдячні вам за ваш коментар!!!
+    </p>
+
+    <!-- Форма комментария -->
+    <div style="max-width: 800px; margin: 0 auto; background-color: white; border-radius: 10px; padding: 20px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);">
+        <form id="comment-form" onsubmit="submitComment(event)">
+            <label for="username" style="font-size: 1.1rem; color: #333;">Ваше Ім'я:</label>
+            <input type="text" id="username" name="username" required style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;">
+
+            <label for="comment-text" style="font-size: 1.1rem; color: #333;">Ваш коментар:</label>
+            <textarea id="comment-text" name="comment-text" rows="4" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+
+            <button type="submit" class="btn" style="background-color: #ff5f6d; padding: 12px 30px; color: white; border-radius: 30px; font-size: 1rem; margin-top: 20px; display: inline-block;">Отправить</button>
+        </form>
+    </div>
+
+    <!-- Секция для отображения комментариев -->
+    <div id="comments-display" style="margin-top: 40px; max-width: 800px; margin: 0 auto; background-color: white; border-radius: 10px; padding: 20px; box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);">
+        <h3 style="font-size: 1.8rem; color: #333;">Коментарі</h3>
+        <div id="comments-list" style="border-top: 1px solid #ddd; padding-top: 20px;">
+            <!-- Здесь будут отображаться комментарии -->
+        </div>
+    </div>
+</section>
+
+<!-- Скрипт для добавления комментариев -->
+<script>
+    // Функция для добавления комментариев
+    function submitComment(event) {
+        event.preventDefault(); // Останавливаем отправку формы по умолчанию
+
+        // Получаем значения из формы
+        var username = document.getElementById("username").value;
+        var commentText = document.getElementById("comment-text").value;
+
+        // Создаем элемент для нового комментария
+        var commentDiv = document.createElement("div");
+        commentDiv.style.borderBottom = "1px solid #ddd";
+        commentDiv.style.paddingBottom = "20px";
+        commentDiv.style.marginBottom = "20px";
+
+        var userNameElem = document.createElement("h4");
+        userNameElem.style.fontSize = "1.3rem";
+        userNameElem.style.color = "#333";
+        userNameElem.textContent = username;
+
+        var commentTextElem = document.createElement("p");
+        commentTextElem.style.fontSize = "1rem";
+        commentTextElem.style.color = "#666";
+        commentTextElem.textContent = commentText;
+
+        var dateElem = document.createElement("p");
+        dateElem.style.fontSize = "0.9rem";
+        dateElem.style.color = "#999";
+        dateElem.style.marginTop = "10px";
+        var date = new Date();
+        dateElem.textContent = "Дата: " + date.toLocaleString();
+
+        // Добавляем все элементы в новый комментарий
+        commentDiv.appendChild(userNameElem);
+        commentDiv.appendChild(commentTextElem);
+        commentDiv.appendChild(dateElem);
+
+        // Добавляем новый комментарий в список комментариев
+        document.getElementById("comments-list").prepend(commentDiv);
+
+        // Очищаем форму после отправки
+        document.getElementById("comment-form").reset();
+    }
+</script>
+    <!-- Зв'язок -->
+    <section id="contact">
+        <h2>Зв'язок</h2>
+        <p>Якщо вам щось потрібно , звертайтеся: Номер - 0936176191  Адреса - grisha.shara23@gmail.com</p>
+    </section>
+
+    <!-- Підвал -->
+    <footer>
+        <p>&copy;Гарні картинки!</p>
+    </footer>
+
+</body>
+</html>
+
